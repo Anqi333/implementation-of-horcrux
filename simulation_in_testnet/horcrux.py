@@ -148,7 +148,7 @@ def work(method, seed, channel_rate, mode, skew_param):
         amt = tx_8[i]
 
         flag = True
-
+        # test if this payment can be performed
         for j in range(len(path) - 1):
             z_r = get_within(path[j], path[j + 1])[0]
             if z_r >= amt:
@@ -228,8 +228,8 @@ def test_uniform_capacity(capacity: object):
 
     for obj in capacity:
         print('capacity factor:', obj)
-        print('Capybara result:')
-        uniform_capacity(method="Capybara", capacity=obj)
+        print('Horcrux result:')
+        uniform_capacity(method="Horcrux", capacity=obj)
 
 
 def multi_work(method, mode, skew_param):
@@ -340,13 +340,13 @@ def multi_uniform_capacity(capacity, method):
 def test_multi_uniform(capacity):
     print('multi_test performance under uniform payments, varying the depleted channel number:')
 
-    # print('Capybara result for running 200 times with capacity 8:')
-    # multi_uniform_capacity(method="Capybara", capacity=8)
+    # print('Horcrux result for running 200 times with capacity 8:')
+    # multi_uniform_capacity(method="Horcrux", capacity=8)
 
     for obj in capacity:
         print('capacity factor:', obj)
-        print('Capybara result:')
-        multi_uniform_capacity(method="Capybara", capacity=obj)
+        print('Horcrux result:')
+        multi_uniform_capacity(method="Horcrux", capacity=obj)
 
 
 def skew(skew_param, method):
@@ -374,8 +374,8 @@ def test_skew(skew_factor):
         # print('LN result:')
         # skew(method="LN", bind_mode=None, skew_param=obj)
 
-        print('Capybara result:')
-        skew(method="Capybara", skew_param=obj)
+        print('Horcrux result:')
+        skew(method="Horcrux", skew_param=obj)
 
 
 def main():

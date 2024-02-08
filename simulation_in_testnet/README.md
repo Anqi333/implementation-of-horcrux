@@ -1,4 +1,4 @@
-This is the simulation of Capybara, Revive, and Shaduf in the Lightning Network. We respectively test the payment success ratio, depleted channels, and volume under the one-time running and long-term running.
+This is the simulation of Horcurx, Revive, and Shaduf in the Lightning Network. We respectively test the payment success ratio, depleted channels, and volume under the one-time running and long-term running.
 
 ## **Requirements:**
 
@@ -18,5 +18,5 @@ This is the simulation of Capybara, Revive, and Shaduf in the Lightning Network.
 2. Get the Bitcoin payment value in 2020-03 using payment_value/get_payment_value.py
 3. Get the LN and Shaduf's performance using shaduf.py
 4. Get the Revive's performance using opt_revive.py
-5. Get the Capybara's performance using capybara.py
+5. Get the Horcurx's performance using horcurx.py
 6. Compare the results
